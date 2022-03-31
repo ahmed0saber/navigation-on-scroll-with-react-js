@@ -5,10 +5,297 @@
   box-sizing: border-box;
 }
 .total-height{
-  height: 800vh;
-  overflow-y: scroll;
+  /* empty */
 }
 .page{
-  height: 100vh;
   position: fixed;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.page :is(.left, .right){
+  background-color: var(--bg);
+  color: var(--color);
+  width: 42%;
+  height: 100%;
+}
+.page .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+.page .left .progress{
+  position: absolute;
+  top: 50px;
+  right: -100px;
+  z-index: 11;
+  padding: 24px;
+  background: var(--bg) url(./svg%20with%20paths.svg) no-repeat right;
+  color: var(--color);
+  width: 260px;
+  height: 260px;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-border-radius: 50% 50% 50% 50%;
+  -moz-border-radius: 50% 50% 50% 50%;
+  -ms-border-radius: 50% 50% 50% 50%;
+  -o-border-radius: 50% 50% 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.page .left .progress div{
+  position: relative;
+  left: -40px;
+}
+.page .left .progress h2{
+  font-size: 36px;
+  margin: 6px 0 16px 0;
+}
+.page .left .progress p{
+  opacity: 0.8;
+}
+.page .left .progress p:last-child{
+  text-align: right;
+}
+.page .left .progress img{
+  width: 100%;
+}
+.page .left .info{
+  padding: 24px;
+}
+.page .left .info h2{
+  font-size: 40px;
+  margin: 0 0 14px 0;
+}
+.page .left .info p{
+  max-width: 140px;
+  line-height: 26px;
+  opacity: 0.8;
+}
+.page .left .foot{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px;
+  opacity: 0.8;
+}
+.page .left .foot .skip{
+  letter-spacing: 4px;
+}
+
+.page .right{
+  width: 58%;
+  position: relative;
+  z-index: 1;
+}
+.page .right .asset1{
+  position: absolute;
+  top: -74px;
+  left: 0px;
+  z-index: 10;
+}
+.page .right .asset2{
+  position: absolute;
+  top: -128px;
+  right: 30px;
+}
+.page .right .asset3{
+  position: absolute;
+  bottom: -98px;
+  right: -28px;
+}
+.page .right .asset4{
+  position: absolute;
+  bottom: -10px;
+  left: 60px;
+  width: 240px;
+}
+.page .right .asset5{
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  width: 200px;
+}
+.page .right .asset6{
+  position: absolute;
+  bottom: 70px;
+  left: 120px;
+  width: 240px;
+}
+.page .right .asset7{
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  width: 200px;
+}
+.page .right .asset8{
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+  width: 280px;
+}
+.page .right .asset9{
+  position: absolute;
+  bottom: 100px;
+  left: 300px;
+  width: 280px;
+}
+.page .right .asset10{
+  position: absolute;
+  bottom: -50px;
+  left: 150px;
+  width: 240px;
+}
+.page .right .asset11{
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  width: 200px;
+}
+.page .right .asset12{
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  width: 200px;
+}
+.page .right .asset13{
+  position: absolute;
+  top: -100px;
+  left: 100px;
+  width: 200px;
+}
+.page .right .asset14{
+  position: absolute;
+  bottom: -160px;
+  left: 330px;
+  width: 200px;
+}
+.page .right .asset15{
+  position: absolute;
+  bottom: -100px;
+  left: 120px;
+  width: 200px;
+}
+.page .right .asset16{
+  position: absolute;
+  top: -30px;
+  left: 340px;
+  width: 200px;
+}
+.page .right .asset17{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+.page .right .asset18{
+  position: absolute;
+  bottom: -70px;
+  right: 212px;
+  width: 320px;
+  z-index: 2;
+}
+.page .right .asset19{
+  position: absolute;
+  bottom: -50px;
+  right: 40px;
+  width: 260px;
+}
+
+@media screen and (max-width: 900px) {
+  .page{
+    flex-direction: column;
+  }
+  .page :is(.left, .right){
+    width: 100%;
+  }
+  .page .right{
+    order: 1;
+  }
+  .page .left{
+    order: 2;
+    justify-content: flex-start;
+  }
+  .page .left .progress{
+    display: none
+  }
+  .page .right .asset1{
+    bottom: 0px;
+    left: 0px;
+  }
+  .page .right .asset2{
+    top: -140px;
+    right: 0px;
+  }
+  .page .right .asset3{
+    bottom: 0px;
+    right: 0px;
+  }
+  .page .right .asset4{
+    bottom: 0px;
+    right: 0px;
+  }
+  .page .right .asset5{
+    bottom: 0px;
+    right: 100px;
+  }
+  .page .right .asset6{
+    bottom: 0px;
+    left: 0px;
+  }
+  .page .right .asset7{
+    bottom: 0px;
+    right: 0px;
+  }
+  .page .right .asset8{
+    top: 0px;
+    left: 200px;
+  }
+  .page .right .asset9{
+    bottom: 0px;
+    left: -40px;
+  }
+  .page .right .asset10{
+    bottom: -50px;
+    left: 0px;
+  }
+  .page .right .asset11{
+    top: -60px;
+    right: 00px;
+  }
+  .page .right .asset12{
+    bottom: 0px;
+    right: 0px;
+  }
+  .page .right .asset13{
+    top: 0px;
+    left: 0px;
+  }
+  .page .right .asset14{
+    top: -50px;
+    left: 50px;
+  }
+  .page .right .asset15{
+    bottom: -100px;
+    left: 120px;
+  }
+  .page .right .asset16{
+    bottom: 0px;
+    left: 0px;
+  }
+  .page .right .asset17{
+    bottom: 0px;
+    left: 0px;
+  }
+  .page .right .asset18{
+    bottom: -70px;
+    right: -80px;
+  }
+  .page .right .asset19{
+    bottom: -50px;
+    left: 0px;
+  }
 }

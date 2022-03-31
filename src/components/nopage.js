@@ -2,7 +2,7 @@ import React from 'react'
 
 function nopage() {
     return (
-        <div className="page">nopage</div>
+        <div Style={"height:" + window.innerHeight + "px"} className="page">nopage</div>
     )
 }
 
