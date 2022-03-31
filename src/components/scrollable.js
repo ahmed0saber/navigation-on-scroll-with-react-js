@@ -18,7 +18,7 @@ const Scrollable = () => {
 
     const handleScroll = () => {
         window.removeEventListener('scroll', handleScroll)
-        let screenHeight = window.screen.height
+        let screenHeight = window.innerHeight
         if (document.documentElement.scrollTop > 6*screenHeight) {
             navigate("/page7")
         } else if (document.documentElement.scrollTop > 5*screenHeight) {

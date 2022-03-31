@@ -6,6 +6,7 @@
 }
 .total-height{
   height: 800vh;
+  overflow-y: scroll;
 }
 .page{
   height: 100vh;
