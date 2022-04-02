@@ -4,6 +4,7 @@ import Bread from './home-assets/dominos-bread.png'
 import Bread2 from './home-assets/dominos-bread1.png'
 import Phone from './home-assets/domi-img1.png'
 import Phone2 from './home-assets/ux-strategy-for-mobile-app-devlopment.png'
+import { NavLink } from "react-router-dom"
 
 const Home = (props) => {
     const [animation, setAnimation] = useState(props.animation)
@@ -24,11 +25,30 @@ const Home = (props) => {
                     <p className="skip">SKIP</p>
                 </div>
                 <div Style="--bg:#4C4C7D;color:#f7f7f7;" className="progress">
-                    <div className={"animate__animated " + (animation ? "animate__fadeInDown" : "animate__fadeOutDown")}>
+                    <div className={"text animate__animated " + (animation ? "animate__fadeInDown" : "animate__fadeOutDown")}>
                         <p>Redefining</p>
                         <h2>UX Strategy</h2>
                         <p>and UI Design</p>
                     </div>
+                    <div className="circle p1"></div>
+                    <div>
+                        <NavLink to="/" className="pageBtn active"></NavLink>
+                        <NavLink to="/about" className="pageBtn"></NavLink>
+                        <NavLink to="/page3" className="pageBtn"></NavLink>
+                        <NavLink to="/page4" className="pageBtn"></NavLink>
+                        <NavLink to="/page5" className="pageBtn"></NavLink>
+                        <NavLink to="/page6" className="pageBtn"></NavLink>
+                        <NavLink to="/page7" className="pageBtn"></NavLink>
+                    </div>
+                </div>
+                <div className="mobile-nav">
+                    <NavLink to="/" className=""></NavLink>
+                    <NavLink to="/about" className=""></NavLink>
+                    <NavLink to="/page3" className=""></NavLink>
+                    <NavLink to="/page4" className=""></NavLink>
+                    <NavLink to="/page5" className=""></NavLink>
+                    <NavLink to="/page6" className=""></NavLink>
+                    <NavLink to="/page7" className=""></NavLink>
                 </div>
             </div>
             <div Style="--bg:#1F273B;color:#080808;" className="right">

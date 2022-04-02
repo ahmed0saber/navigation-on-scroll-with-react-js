@@ -4,9 +4,6 @@
   font-family: sans-serif;
   box-sizing: border-box;
 }
-.total-height{
-  /* empty */
-}
 .page{
   position: fixed;
   display: flex;
@@ -46,9 +43,132 @@
   flex-direction: column;
   justify-content: center;
 }
-.page .left .progress div{
+.progress .circle{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 220px;
+  height: 220px;
+  border: 2px solid #f7f7f7;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.progress .circle.p1{
+  clip-path: ellipse(1% 100% at 8% 50%);
+  transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+}
+.progress .circle.p2{
+  clip-path: ellipse(12% 100% at 8% 50%);
+  transform: rotate(37deg);
+  -webkit-transform: rotate(37deg);
+  -moz-transform: rotate(37deg);
+  -ms-transform: rotate(37deg);
+  -o-transform: rotate(37deg);
+}
+.progress .circle.p3{
+  clip-path: ellipse(40% 100% at 8% 50%);
+  transform: rotate(54deg);
+  -webkit-transform: rotate(54deg);
+  -moz-transform: rotate(54deg);
+  -ms-transform: rotate(54deg);
+  -o-transform: rotate(54deg);
+}
+.progress .circle.p4{
+  clip-path: ellipse(60% 100% at 8% 50%);
+  transform: rotate(78deg);
+  -webkit-transform: rotate(78deg);
+  -moz-transform: rotate(78deg);
+  -ms-transform: rotate(78deg);
+  -o-transform: rotate(78deg);
+}
+.progress .circle.p5{
+  clip-path: ellipse(74% 100% at 8% 50%);
+  transform: rotate(100deg);
+  -webkit-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
+  -ms-transform: rotate(100deg);
+  -o-transform: rotate(100deg);
+}
+.progress .circle.p6{
+  clip-path: ellipse(84% 100% at 8% 50%);
+  transform: rotate(128deg);
+  -webkit-transform: rotate(128deg);
+  -moz-transform: rotate(128deg);
+  -ms-transform: rotate(128deg);
+  -o-transform: rotate(128deg);
+}
+.progress .circle.p7{
+  clip-path: ellipse(90% 100% at 8% 50%);
+  transform: rotate(152deg);
+  -webkit-transform: rotate(152deg);
+  -moz-transform: rotate(152deg);
+  -ms-transform: rotate(152deg);
+  -o-transform: rotate(152deg);
+}
+
+.pageBtn{
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-color: #f7f7f788;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.pageBtn:hover{
+  background-color: #f7f7f7bb;
+  border: 2px solid #f7f7f7;
+}
+.pageBtn:nth-child(1){
+  top: 47px;
+  left: 46px;
+}
+.pageBtn:nth-child(2){
+  top: 15px;
+  left: 123px;
+}
+.pageBtn:nth-child(3){
+  top: 50px;
+  left: 201px;
+}
+.pageBtn:nth-child(4){
+  top: 126px;
+  left: 231px;
+}
+.pageBtn:nth-child(5){
+  top: 194px;
+  left: 203px;
+}
+.pageBtn:nth-child(6){
+  top: 232px;
+  left: 125px;
+}
+.pageBtn:nth-child(7){
+  top: 200px;
+  left: 48px;
+}
+.pageBtn.active{
+  background-color: #f7f7f7;
+}
+
+.page .left .progress .text{
   position: relative;
   left: -40px;
+  background-color: inherit;
+  z-index: 2;
+  padding: 2px 0;
 }
 .page .left .progress h2{
   font-size: 36px;
@@ -204,6 +324,26 @@
   right: 40px;
   width: 260px;
 }
+.mobile-nav{
+  display: none;
+}
+.mobile-nav a{
+  width: 18px;
+  height: 18px;
+  background-color: #f7f7f788;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.mobile-nav a:hover{
+  background-color: #f7f7f7bb;
+  border: 2px solid #f7f7f7;
+}
+.mobile-nav a.active{
+  background-color: #f7f7f7;
+}
 
 @media screen and (max-width: 900px) {
   .page{
@@ -297,5 +437,10 @@
   .page .right .asset19{
     bottom: -50px;
     left: 0px;
+  }
+  .mobile-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
